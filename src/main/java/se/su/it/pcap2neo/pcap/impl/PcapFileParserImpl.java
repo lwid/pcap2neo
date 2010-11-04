@@ -3,8 +3,6 @@ package se.su.it.pcap2neo.pcap.impl;
 import edu.gatech.sjpcap.IPPacket;
 import edu.gatech.sjpcap.Packet;
 import edu.gatech.sjpcap.PcapParser;
-import edu.gatech.sjpcap.TCPPacket;
-import edu.gatech.sjpcap.UDPPacket;
 import se.su.it.pcap2neo.pcap.*;
 
 import org.springframework.beans.factory.annotation.*;

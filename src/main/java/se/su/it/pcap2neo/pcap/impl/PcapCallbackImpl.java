@@ -2,7 +2,6 @@ package se.su.it.pcap2neo.pcap.impl;
 
 
 import org.apache.log4j.Logger;
-import org.neo4j.graphdb.Relationship;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +22,7 @@ public class PcapCallbackImpl implements PcapCallback {
 		if(packet instanceof TCPPacket){
 			TCPPacket tcpPacket = (TCPPacket) packet;
 			logger.debug("TCP " + tcpPacket);
-			Relationship rel = neo.addTcpSyn(tcpPacket.src_ip, tcpPacket.dst_ip, tcpPacket.dst_port);
+			neo.addTcpSyn(tcpPacket.src_ip, tcpPacket.dst_ip, tcpPacket.dst_port);
 		} else {
 			logger.debug("Discaring unknown packet " + packet.src_ip.getHostAddress() + "=>" + packet.dst_ip.getHostAddress());
 		}
