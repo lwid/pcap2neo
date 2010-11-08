@@ -29,8 +29,16 @@
         <level value="INFO"/>
     </logger>
 
+    <logger name="org.neo4j.index">
+        <level value="DEBUG"/>
+    </logger>
+
     <logger name="se.su">
         <level value="INFO"/>
+    </logger>
+
+    <logger name="se.su.it.pcap2neo.neo">
+        <level value="DEBUG"/>
     </logger>
     
     <root>
